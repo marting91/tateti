@@ -1,5 +1,6 @@
-import Button from "./components/Button";
 import React, { useState } from "react";
+import Button from "./components/Button";
+import Header from "./components/Header";
 
 
 function App() {
@@ -30,10 +31,8 @@ function App() {
 
 	return (
 		<>
-			<div>
-				<h2>Ta-Te-Ti</h2>
-			</div>
-			<div>
+			<Header />
+			<div className="container main-container">
 				<div className="tablero">
 					{table.map((button, index) => (
 						<div>
@@ -49,7 +48,7 @@ function App() {
 					))}
 				</div>
 				<div>
-					<h2>
+					<h2 className="center">
 						{
 							winner
 								?
